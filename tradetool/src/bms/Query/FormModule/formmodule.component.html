@@ -1,0 +1,54 @@
+<div id="content">
+  <div class="titlebox">Query Form:</div>
+  <form [formGroup]="formRefModel.formRefGroup" (ngSubmit)="onSubmit()">
+    <p>
+      <label for="queryRef">Query Ref :
+        <input formControlName="queryRefControl" [(ngModel)]="formRefModel.queryRef" type="text">
+      </label>
+
+      <span [hidden]="(formRefModel.formRefGroup.valid)" style="color: red;">queryRef is required</span>
+
+    </p>
+    <p>
+      <label>Query Type:
+        <select formControlName="queryTypeControl" [(ngModel)]="formRefModel.queryType">
+          <option>General Query</option>
+          <option>Transactional Query</option>
+        </select>
+      </label>
+      <!-- <input formControlName="queryTypeControl" [(ngModel)]="formRefModel.queryType" type="text"></label>
+      {{formRefModel.queryType}} -->
+      <span [hidden]="(formRefModel.formRefGroup.valid)" style="color: red;">Query Type is required</span>
+    </p>
+    <p>
+      <label>Raised By : <input formControlName="raisedByControl" [(ngModel)]="formRefModel.raisedBy" type="text"
+          name="raisedBy"></label>
+      {{formRefModel.raisedBy}}
+      <span [hidden]="(formRefModel.formRefGroup.valid)" style="color: red;">Raised By is required</span>
+    </p>
+    <p>
+      <label>Raised On : <input formControlName="raisedOnControl" [(ngModel)]="formRefModel.raisedOn" type="text"
+          name="raisedOn"></label>
+      {{formRefModel.raisedOn}}
+      <span [hidden]="(formRefModel.formRefGroup.valid)" style="color: red;">Raised On is required</span>
+    </p>
+    <p>
+      <label>Status : <input formControlName="statusControl" [(ngModel)]="formRefModel.status" type="text"
+          name="status"></label>
+      {{formRefModel.status}}
+      <span [hidden]="(formRefModel.formRefGroup.valid)" style="color: red;">Status is required</span>
+    </p>
+
+    <input type="submit" [disabled]="!(formRefModel.formRefGroup.valid)">
+  </form>
+</div>
+<!-- <div formArrayName="formRefModel.aliases">
+  <h2>Aliases</h2>
+  <button (click)="formRefModel.addAlias()">+ Add another alias</button> -->
+
+<!-- <div *ngFor="let alias of formRefModel.aliases.controls; let i=index"> -->
+<!-- The repeated alias template -->
+<!-- <label for="alias-{{ i }}">Alias:</label>
+    <input id="alias-{{ i }}" type="text" [formControlName]="i">
+  </div>
+</div> -->

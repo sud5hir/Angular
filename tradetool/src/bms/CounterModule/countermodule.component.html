@@ -1,0 +1,12 @@
+<section class="twoway">
+  <div>
+    <input class="plusinput" type="Submit" Value="+" (click)="IncrementOrDecrementCounter(1)" />
+
+    <input ExampleDirective class="input" type="text" name="Location" [(ngModel)]="count" />
+
+    <input class="minusinput" type="Submit" Value="-" (click)="IncrementOrDecrementCounter(0)" />
+  </div>
+</section>
+<p>Counter Component</p>
+{{count}}
+<app-child (msgEvent)="receiveMsg($event)" [count]="count"></app-child>

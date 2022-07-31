@@ -1,0 +1,23 @@
+<form (ngSubmit)="OnSubmit()" #heroForm="ngForm">
+  <p>
+    <label for="refId">Ref Id :
+      <input required id="refId" #refId="ngModel" name="refId" [(ngModel)]="formRefModel.refId" type="text">
+      <!-- <span [hidden]= >Ref Id is Requird</span> -->
+    </label>
+    <span [hidden]="refId.valid || refId.pristine" style="color: red;">RefId is required</span>
+  </p>
+  <p>
+    <label>Country: <input required #country="ngModel" name="country" id="country" [(ngModel)]="formRefModel.country"
+        type="text"></label>
+    <span [hidden]="country.valid || country.pristine" style="color: red;">Country is required</span>
+    <!-- <span>country is Requird</span> -->
+  </p>
+
+  <p>
+    <label>Amount : <input type="text" name="amount"></label>
+    <!-- <span [hidden]="(formRefModel.formRefGroup.valid)" style="color: red;">Country is required</span> -->
+  </p>
+
+  <input [disabled]="!heroForm.form.valid" type="submit">
+
+</form>

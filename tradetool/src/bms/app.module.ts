@@ -18,6 +18,10 @@ import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-logi
 import { GoogleLoginProvider } from 'angularx-social-login';
 import { StoreModule } from "@ngrx/store";
 import { userListReducer } from "./Store/user-list- reducer";
+import { CountermoduleComponent } from './CounterModule/countermodule.component';
+import { ChildComponent } from './child/child.component';
+import { CourseComponent } from './Course/course.component';
+import { MasterComponent } from './MaterPage/master.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,10 @@ import { userListReducer } from "./Store/user-list- reducer";
     AppComponent,
     // BmsComponent,
     LoginComponent,
+    CountermoduleComponent,
+    ChildComponent,
+    CourseComponent,
+    MasterComponent,
 
     // LoandetailsComponent,
     // AcctdetailsComponent
