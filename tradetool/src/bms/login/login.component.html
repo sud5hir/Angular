@@ -1,0 +1,23 @@
+<div id="content">
+    <!-- <div  style="color: black; align-content: center;">Login Form</div> -->
+    <form [formGroup]="formRefModel.formRefGroup" (ngSubmit)="Login()">
+        <p>
+            <label for="userName"  style="color: black;margin-left: 5px;">User Name :
+                <input formControlName="userNameControl" [(ngModel)]="formRefModel.userName" type="text">
+            </label>
+             
+            <span [hidden]="(formRefModel.formRefGroup.valid)" style="color: red; margin-left: 10px;">UserName is required</span>
+        </p>
+
+        <p>
+            <label  style="color: black;margin-left: 5px;">password: <input formControlName="passwordControl" [(ngModel)]="formRefModel.password" type="text"
+                    name="password"></label>
+            {{formRefModel.password}}
+            <span [hidden]="(formRefModel.formRefGroup.valid)" style="color: red;margin-left: 10px;">Password is required</span>
+        </p>
+
+
+        <input type="submit" [disabled]="!(formRefModel.formRefGroup.valid)">
+        {{errorMessage}}
+    </form>
+</div>

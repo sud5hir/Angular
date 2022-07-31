@@ -1,0 +1,45 @@
+<ng-container *ngFor="let product of pizzaData">
+    <section class="Mainsection">
+      <section>
+        <h4> &#x20b9; {{product.Price}}</h4>
+      </section>
+      <br>
+      <section class="detailsection">
+        <div>
+          <h3>{{product.Title}}</h3>
+          <p>{{product.Description}}</p>
+        </div>
+  
+        <hr>
+        <div>
+          <div class="divForSize">
+            <label>Size </label>
+            <br>
+            <select id="Size">
+              <option *ngFor="let productSize of product.Size">{{productSize}}
+              </option>
+  
+            </select>
+          </div>
+  
+          <div class="divForCurst">
+            <label>Curst :</label>
+            <br>
+            <select id="Curst">
+              <option *ngFor="let productCurst of product.Crust"> {{productCurst}} {{productCurst}}
+              </option>
+  
+            </select>
+          </div>
+        </div>
+        <hr>
+  
+        <br>
+        <div class="divForBtn">
+          <input class="inputForBtn" id="btn1" type="Submit" value="'ADD TO CART'">
+        </div>
+  
+      </section>
+    </section>
+  </ng-container>
+  

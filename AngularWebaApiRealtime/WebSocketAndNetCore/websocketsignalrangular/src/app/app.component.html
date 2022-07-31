@@ -1,0 +1,13 @@
+<div>
+<label for="connect">WebSocket connection:</label>
+<button (click)="connect()" type="submit">Connect</button>
+<button (click)="disconnect()" type="submit" disabled="disabled">Disconnect
+</button>
+<label for="name">What is your name?</label>
+                  <input type="text" [(ngModel)]="name" name="name"> <br>
+
+              <button (click)="sendMessage()" type="submit">Send</button>
+            greeting :- {{ greeting }}
+          </div>
+
+<router-outlet></router-outlet>

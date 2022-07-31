@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "08c80fc4-d1c2-460f-beaf-92adb597a4e6": {
+      "ProjectGuid": "08c80fc4-d1c2-460f-beaf-92adb597a4e6",
+      "DisplayName": "WebApplication1",
+      "ColorIndex": 0
+    },
+    "8d8605f2-1949-452b-afe7-23d9cedccbbb": {
+      "ProjectGuid": "8d8605f2-1949-452b-afe7-23d9cedccbbb",
+      "DisplayName": "GrpcService1",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

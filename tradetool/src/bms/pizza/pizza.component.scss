@@ -1,0 +1,67 @@
+.Mainsection{
+    width: 30%; 
+    height: 50%;
+    float: left;
+     margin-top: 50px;
+    margin-left: 50px;
+    text-align: Left; 
+    background-color:rgb(231, 236, 230);  
+    border: 1px solid rgb(23, 226, 23); 
+  }
+  
+  .detailsection
+  { 
+    background-color:rgb(231, 236, 230);  
+    border: 1px solid rgb(23, 226, 23); 
+    background-color:#ffffff;
+    margin-top: 0px;  
+     }
+   
+   h3,p{
+     margin-left: 5Px;
+     margin-top: 3px;
+     font-family:'Courier New', Courier, monospace
+   }
+   
+  .divForSize,.divForCurst
+  {
+    margin-left: 8px;  
+    margin-right:8px; 
+   display: inline-block;   
+  }
+  .divForSize
+  {
+   width: 55%;
+  }
+  .divForCurst
+  {
+   width: 33%;
+  }
+  
+  hr{    
+    margin-left: 8px ;
+    margin-right: 8px ; 
+  }
+  select,option {
+    font-size: .9rem;
+    padding: 2px 5px;
+    font-weight: bold;
+    border:0px;
+    outline:0px;
+  }
+  
+  .divForBtn{
+    text-align: right; 
+  }
+  
+  .inputForBtn{  
+    border: 1px solid rgb(37, 194, 37); 
+    color: rgb(38, 219, 38);
+    padding: 8px;  
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size:smaller;
+    font-weight:bold;  
+    background: white;
+  } 
+  

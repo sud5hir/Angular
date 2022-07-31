@@ -1,0 +1,31 @@
+<section>
+  <!-- [grid-columns]="[{'colName':A},{'colName':B}]" -->
+  <!-- <query-form (SavedData-Pushed)="SavedData($event)"></query-form>
+  <search-root (SearcheddData-Pushed)="SearchedData($event)" [queryData]="tempQueryData"></search-root> -->
+  <div>
+    <table>
+      <tr>
+        <th *ngFor="let queryColumn of columnNames"> {{queryColumn}}
+          <!-- <sort-root [fielName]="queryColumn" (SortedData-Pushed)="SortData($event)" [queryData]="queryData">
+          </sort-root> -->
+        </th>
+      </tr>
+
+      <ng-container *ngFor="let query of queryData">
+        <tr *ngIf="query.queryRef.length <33 && regex.test(query.queryRef)">
+          <td> {{query.queryRef}} </td>
+          <td> {{query.queryType}} </td>
+          <td> {{query.raisedBy}}</td>
+          <td> {{query.raisedOn}}</td>
+          <td> {{query.status}}</td>
+          <td>
+            <button>Delete</button>
+          </td>
+          <td>
+            <button>Edit</button>
+          </td>
+        </tr>
+      </ng-container>
+    </table>
+  </div>
+</section>
